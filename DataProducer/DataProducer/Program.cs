@@ -38,6 +38,7 @@ namespace DataProducer
                 numThreads = Convert.ToInt32(ConfigurationManager.AppSettings["numThreads"]);
             }
             catch { }
+
             //Set up connections to Service Bus and create the client object
             ServiceBusConnectionStringBuilder builder = new ServiceBusConnectionStringBuilder(connectionString);
             builder.TransportType = TransportType.Amqp;
